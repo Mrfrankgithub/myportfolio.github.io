@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --text-color: #14168a;
+  --navbar-bg: linear-gradient(to right, #00093c, #2d0b00);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--navbar-bg);
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  position: fixed;
+  z-index: 9000;
+  width: 100%;
+  /* border-bottom: 1px solid #e5e5e5; */
+}
+
+header .logo a {
+  color: #3f46a5;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+    z-index: 10;
+    height: 100%;
+  }
+
+  nav a {
+    padding: 20px 30px;
+    width: 100%;
+    color: var(--text-color);
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+}
+
+.open-sidebar-button svg {
+  fill: white; /* Makes the SVG white */
+  cursor: pointer;
+}
+
+.close-sidebar-button svg {
+  fill: black; /* Makes the SVG white */
+  cursor: pointer;
+}
+
+.open-sidebar-button:hover svg,
+.close-sidebar-button:hover svg {
+  fill: #ddd; /* Optional hover effect */
+}
+
+.footer {
+  background: linear-gradient(to right, #1a2563, #501e0e);
+  color: #fff;
+  padding: 60px 0;
+  margin-top: 20px;
+  border-radius: 50px 50px 0 0;
+}
+
+.footer h5 {
+  color: #7989d2;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer .footer-logo {
+  font-size: 1.8rem;
+  color: #7989d2;
+  margin-bottom: 20px;
+  font-family: "Brush Script MT", cursive;
+}
+
+.footer a {
+  color: #f6feff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #1e4e57;
+}
+
+.footer .social-icons a {
+  font-size: 1.9rem;
+  margin-right: 15px;
+}
+
+.footer .copyright {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #7f7f7f;
+}
+
+.hawk {
+  margin: 0 auto;
+  padding: 1em;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.hawk::after,
+.hawk::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.hawk::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}

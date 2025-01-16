@@ -10,48 +10,52 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./main.css">
   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="./toastr.min.css"> -->
   <script defer src="./jquery.min.js"></script>
-     
   <title>Home!</title>
 </head>
 
 <body style=" background: linear-gradient(to right, #00093c,#2d0b00);">
+  
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-aos="fade-down"
-    style=" background: linear-gradient(to right, #00093c,#2d0b00);">
-    <a class="navbar-brand" href="#">
-      <h2><i class="fa-regular fa-star-half-stroke" style="color:blue;"></i><span style="color:blue;">FRANKS</span>WEB<i
-          class="fa-solid fa-star"></i></h2>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse flex-start" id="navbarNav" style="justify-content: flex-end;">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link btn btn-outline-warning" href="/"><i class="fa-solid fa-star-and-crescent"></i>HOME <span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#service1"><i class="fa-solid fa-star-half"></i>SERVICES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about"><i class="fa-solid fa-star"></i>ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#support"><i class="fa-regular fa-star-half-stroke"></i>SUPPORT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacts"></i><i class="fa-regular fa-star"></i>CONTACTS</a>
-        </li>
-      </ul>
+  <header>
+    <div class="logo">
+      <a href="">
+        <h2 style="color: #fff;">
+          <i class="fa-regular fa-star-half-stroke" style="color:blue;"></i>
+          <span style="color:blue;">FRANKS</span>WEB
+          <i class="fa-solid fa-star"></i>
+        </h2>
+      </a>
     </div>
-  </nav>
+
+    <nav>
+      <input type="checkbox" id="sidebar-active">
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+      </label>
+      <label id="overlay" for="sidebar-active"></label>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg>
+        </label>
+        <a href="/"><i class="fa-solid fa-star-half"></i>HOME</a>
+        <a href="/about">ABOUT</a>
+        <a href="#service1">SERVICES</a>
+        <a href="#project">PROJECTS</a>
+        <a href="#contacts">CONTACT</a>
+        <a href="#support">SUPPORT</a>
+      </div>
+    </nav>
+  </header>
 
   <div class="container-fluid text-light" style="padding-top: 200px;">
     <div class="row">
@@ -73,7 +77,6 @@
       <div class="col-md-3">
 
       </div>
-
     </div>
   </div>
   <div class="container-fluid text-light">
@@ -195,7 +198,7 @@
     </div>
   </div>
 
-  <div class="container-fluid plan" id="service1">
+  <div class="container-fluid" id="service1">
     <h2 class="py-3 text-center" style="color: rgb(21, 194, 194);"><span
         style="font-family:Georgia, Times, 'Times New Roman', serif; color: chartreuse;">My</span> Services</h2>
     <div class="row text-light">
@@ -239,6 +242,7 @@
 
   <section class="vh-100" id="support">
     <div class="container h-100 pt-5">
+            <h2 class="text-center text-light mb-4">Support Chat</h2>
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-xl-9">
           <form name="contact">
@@ -258,7 +262,7 @@
                     <h6 class="mb-0">Email address</h6>
                   </div>
                   <div class="col-md-9 pe-5">
-                    <input type="email" class="form-control form-control-lg" placeholder="example@example.com" />
+                    <input type="email" class="form-control form-control-lg" placeholder="" />
                   </div>
                 </div>
                 <hr class="mx-n3">
@@ -282,41 +286,128 @@
     </div>
   </section>
 
-  <div class="container-fluid pt-4" id="contacts" data-aos="zoom-in">
-    <div class="row" style="align-items: center; justify-content: center;">
-      <div class="col-md-6 contact-grid-right">
-        <iframe src="#"> </iframe>
-        <div class="col-md-4 pt-2">
-          <h5>Phone:</h5>
-          <span>+234-9155-7547-52<br>+234-7043-5018-77</span>
+  
+
+  <div class="container my-5" id="project">
+    <h2 class="text-center text-light mb-4">My Projects</h2>
+    <p class="text-center text-light mb-4">Here are a few of my projects, among 22+ completed, including back-end work.</p>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 hawk">
+          <iframe src="https://f-translator.onrender.com"></iframe>
+          <div class="card-body">
+            <h5 class="card-title">Three-in-one </h5>
+            <p class="card-text"></p>
+            <a href="https://f-translator.onrender.com" target="_blank" class="btn btn-primary">Visit Project</a>
+          </div>
         </div>
-        <div class="col-md-4 pt-2">
-          <p>Thanks For Choosing FRANKSWEB</p>
-        </div>
-        <div class="col-md-4 pt-2">
-          <h5>Email</h5>
-          <span style="color: blue;"><a>mrfrankdeprogrammer@gmail.com</a></span>
-        </div>
-        <div class="clearfix"> </div>
       </div>
-      <div class="clearfix"> </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 hawk">
+          <iframe  src="https://todoapp-fpw1.onrender.com" frameborder="0"></iframe>
+          <div class="card-body">
+            <h5 class="card-title">Todo-app</h5>
+            <p class="card-text"></p>
+            <a href="https://todoapp-fpw1.onrender.com" target="_blank" class="btn btn-primary">Visit Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 hawk">
+          <iframe style="overflow-y: hidden;" src="https://f-store-031o.onrender.com" frameborder="0"></iframe>
+          <div class="card-body">
+            <h5 class="card-title">E-comm frontend</h5>
+            <p class="card-text"></p>
+            <a href="https://f-store-031o.onrender.com" target="_blank" class="btn btn-primary">Visit Project</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-----start-contact-social---->
-    <ul class="list-unstyled list-inline contact-social">
-      <a><i class="fa-brands fa-facebook"></i></a>
-      <a><i class="fa-brands fa-google-plus"></i></a>
-      <a><i class="fa-brands fa-linkedin"></i></a>
-      <a><i class="fa-brands fa-twitter"></i></a>
-      <a><i class="fa-brands fa-telegram"></i></a>
-    </ul>
-    <!-----//End-contact-social---->
   </div>
 
-  <p class="text-center text-light  d-flex justify-content-center pt-5 animate__animated animate__pulse">Copyright ©
-    2023 - 2024
-    Franksweb.com - All Rights Reserved.</p>
+ 
 
 
+  
+     <!-- Footer Section -->
+    <footer class="footer" id="contacts" data-aos="zoom-in">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Section -->
+                <div class="col-md-4">
+                    <div class="footer-logo">Franksweb</div>
+                    <p>I thrive on solving complex problems and creating innovative solutions that enhance user 
+                      experiences.My learning journey has been marked by a continuous quest for knowledge and growth. 
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+              
+
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> ifite awka, first market.</p>
+                    <p><i class="fas fa-phone"></i> +234-7043-5018-77</p>
+                    <p><i class="fa-brands fa-whatsapp"></i> +234-9155-7547-52</p>
+                    <p><i class="fas fa-envelope"></i> mrfrankdeprogrammer@gmail.com</p>
+                </div>
+
+                  <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#contacts">Contact</a></li>
+                         <li><a href="#service">Service</a></li>
+                          <li><a href="#project">Project</a></li>
+                    </ul>
+                </div>
+
+          
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center mt-4">
+                    <!-- Social Icons -->
+                    <div class="social-icons">
+                        <a href="https://wa.me/*2349155754752"><i class="fa-brands fa-whatsapp"></i></a>
+                       
+                        <a href="https://instagram.com/@ahm_mr_frank"><i class="fab fa-instagram"></i></a>
+                        
+                        <a href="https://linkedin.com/in/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://twitter.com/@MrFrank_De"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://t.me/@mrfrankde"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                    <p class="text-center  d-flex justify-content-center pt-5 animate__animated animate__pulse">Copyright ©
+                      2023 - 2024
+                      Franksweb.com - All Rights Reserved.</p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6787f696825083258e05ae4f/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+        <!--End of Tawk.to Script-->
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -328,6 +419,7 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/kursor"></script>
+ 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -341,6 +433,13 @@
 
 
   <script>
+      // Close the sidebar when a link is clicked
+    // document.querySelectorAll('.sidebar-link').forEach(link => {
+    //   link.addEventListener('click', () => {
+    //     document.getElementById('sidebar-active').checked = false;
+    //   });
+    // });
+
     function generateRandomText() {
       const allowed = ["UI/UX", "Mobile apps", "games", "Full stack apps"];
       const randomNum = Math.floor(Math.random() * allowed.length);
@@ -428,3 +527,6 @@
 </body>
 
 </html>
+
+
+
